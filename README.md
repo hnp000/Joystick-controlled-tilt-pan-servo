@@ -64,8 +64,8 @@ openocd -f interface/stlink.cfg -f target/stm32f4x.cfg \ -c "program MyApp.elf v
 
 2. Python GUI:
     - Open python gui from python_app folder by exucuting this command: 
-```bash
-python gui.py
-```
+       ```bash
+       python gui.py
+       ```
     - Connect to specific PORT (COM) and baudrate is 115200
     - now give nay value to servo1(base) and/or servo2(tilt) in degree to move servo
