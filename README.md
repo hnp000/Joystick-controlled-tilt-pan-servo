@@ -42,24 +42,30 @@ Servos: Standard hobby tilt-pan servo
 
 1. Clone repository:
 
-
+```bash
 git clone https://github.com/hnp000/Joystick-controlled-tilt-pan-servo.git
-
+```
 
 2. Build with CMake:
+```bash
 mkdir build && cd build
 cmake -B build -G 'Unix Makefiles'" ..
 cmake build
+```
 
 3. Flash to device:
-openocd -f interface/stlink.cfg -f target/stm32f4x.cfg \
-  -c "program MyApp.elf verify reset exit"
+```bash
+openocd -f interface/stlink.cfg -f target/stm32f4x.cfg \ -c "program MyApp.elf verify reset exit"
+```
 
 ## Usage
 1. Joystick Control: 
     Power on the system. Move joystick and  servos will respond in real-time
 
 2. Python GUI:
-    - Open python gui from python_app folder by exucuting this comman: python gui.py
+    - Open python gui from python_app folder by exucuting this command: 
+```bash
+    python gui.py
+```
     - Connect to specific PORT (COM) and baudrate is 115200
     - now give nay value to servo1(base) and/or servo2(tilt) in degree to move servo
